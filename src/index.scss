@@ -1,0 +1,19 @@
+:root {
+  --main-font-color: #333;
+  --main-bg-color: rgb(247 242 217 / 60%);
+}
+
+html {
+  color: var(--main-font-color);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+.root {
+  padding: 0 10px;
+}

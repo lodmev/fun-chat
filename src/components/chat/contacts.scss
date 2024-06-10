@@ -1,0 +1,40 @@
+.contact-list {
+  grid-area: contacts;
+  box-sizing: border-box;
+  border-right: 1px solid black;
+  padding: 0.2rem 0.3rem;
+  overflow-y: scroll;
+  .user-search-input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.1rem 0.3rem;
+  }
+  .list {
+    list-style: none;
+    margin-top: 0.5rem;
+    margin-left: 0.3rem;
+  }
+}
+
+.user-item {
+  &.hidden {
+    display: none;
+  }
+  &.online .user-name {
+    color: var(--main-font-color);
+    &::before {
+      opacity: 1;
+    }
+  }
+  .user-name {
+    margin-top: 0.1rem;
+    color: grey;
+    cursor: pointer;
+    &::before {
+      content: '\2705';
+      position: relative;
+      right: 0.3rem;
+      opacity: 0;
+    }
+  }
+}

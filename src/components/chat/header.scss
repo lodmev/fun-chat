@@ -1,0 +1,22 @@
+@import '../../styles/button';
+.chat-header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  border-bottom: 1px solid black;
+  max-height: 2rem;
+
+  .buttons-block {
+    display: flex;
+    gap: 1vw;
+  }
+  .user-name-block {
+    display: block;
+    padding-top: 3px;
+    .user-name {
+      font-weight: 600;
+      color: green;
+    }
+  }
+}

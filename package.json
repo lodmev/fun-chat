@@ -1,0 +1,50 @@
+{
+  "name": "fan-chat",
+  "version": "1.0.0",
+  "description": "Chat application with websocket server",
+  "main": "./src/index.ts",
+  "scripts": {
+    "start": "webpack serve",
+    "build": "webpack",
+    "lint": "eslint --ext .ts .",
+    "format": "prettier --write \"**/*.+(js|ts|json)\"",
+    "ci:format": "prettier --check \"**/*.+(js|ts|json)\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "cd .. && husky fun-chat/.husky"
+  },
+  "author": "lodmev",
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.1.1",
+    "@typescript-eslint/parser": "^7.1.1",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^6.10.0",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^18.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "html-webpack-plugin": "^5.6.0",
+    "husky": "^9.0.11",
+    "mini-css-extract-plugin": "^2.8.1",
+    "prettier": "^3.2.5",
+    "prettier-eslint": "^16.3.0",
+    "sass": "^1.71.1",
+    "sass-loader": "^14.1.1",
+    "ts-loader": "^9.5.1",
+    "validate-branch-name": "^1.3.0",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run ci:format",
+      "pre-push": "validate-branch-name"
+    }
+  },
+  "validate-branch-name": {
+    "pattern": "^(feat|fix|refactor|chore|)/.+$",
+    "errorMsg": "wrong naming of commit"
+  }
+}

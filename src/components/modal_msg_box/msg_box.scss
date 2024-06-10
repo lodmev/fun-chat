@@ -1,0 +1,47 @@
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  opacity: 1;
+  transition: opacity 0.7s;
+  z-index: 100;
+  background-color: rgba($color: grey, $alpha: 0.5);
+  &.hidden {
+    z-index: -1;
+    opacity: 0;
+  }
+}
+
+.message-box {
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+  max-width: 460px;
+  border: 2px solid darkgrey;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgb(230, 230, 220);
+  &__header {
+    padding: 0 1rem;
+    background-color: lightblue;
+    &.error {
+      color: red;
+    }
+  }
+  &__message {
+    padding: 1rem;
+  }
+  &__ok-button {
+    margin: 5% auto;
+    min-width: 5rem;
+    font-weight: 600;
+    cursor: pointer;
+    &.hidden {
+      display: none;
+    }
+  }
+}

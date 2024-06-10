@@ -1,0 +1,31 @@
+.chat {
+  display: grid;
+  grid-template-areas:
+    'header header'
+    'contacts history'
+    'footer footer';
+  grid-template-columns: 0.5fr 1.5fr;
+  grid-template-rows: 3rem auto 3rem;
+  border: 2px solid purple;
+  max-width: 1440px;
+  height: calc(100vh - 2rem);
+  margin: 0 auto;
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+.chat-footer {
+  border-top: 1px solid black;
+  padding: 10px 0;
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-height: 2rem;
+  .logo {
+    width: 30px;
+  }
+  .author {
+    text-decoration: none;
+    color: var(--main-font-color);
+  }
+}
